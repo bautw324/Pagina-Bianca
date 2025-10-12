@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Header</h1>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+        <div class="main-content">
+            <aside class="left-aside">
+                <h3>Left Aside</h3>
+            </aside>
+            <main>
+                <h2>Main</h2>
+                <div class="input-bar">
+                   <input type="text" class="input" id="buscador" placeholder="Busca algo..." autocomplete="off">
+                </div>
+                <h3 id="resultado">Resultado de la busqueda</h3>
+                <div class="caja-container">
+                    <div class="caja">
+                        <h3>Caja 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="caja">
+                        <h3>Caja 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="caja">
+                        <h3>Caja 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="caja">
+                        <h3>Caja 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="caja">
+                        <h3>Caja 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="caja">
+                        <h3>Caja 6</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>                
+            </main>
+            <div class="low-content">
+                <h2>Low Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum rerum minus corrupti pariatur maxime reprehenderit voluptas molestiae fugiat unde nihil excepturi, facere voluptatum, animi quaerat, vero optio iste laudantium!</p><br>
+                <div class="input-bar">
+                    <input type="text" class="input" id="texto" placeholder="Escribe algo..." autocomplete="off">
+                    <button class="boton" id="agregarBtn">Agregar</button>  
+                </div>
+                <ul id="lista"></ul>
+            </div>     
+            <aside class="right-aside">
+                <h3>Right Aside</h3>
+            </aside>
+        </div>
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+    </div>
+</body>
+</html>
