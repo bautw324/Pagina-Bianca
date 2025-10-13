@@ -6,11 +6,14 @@
     box-sizing: border-box;
     font-family: 'Lexend', sans-serif;
     color: #9d69a1;
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     background-color: #FFF5F8;
 }
 header{
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     background-color: #F7C5CC;
@@ -19,6 +22,7 @@ header{
     font-family: 'Lobster', cursive;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 .busqueda{
     display: flex;
@@ -34,7 +38,7 @@ header{
     border-radius: 50%;
     transition: background-color 0.3s;
 }
-#botonBusqueda:hover{
+#botonBusqueda:active{
     background-color: #9d69a1;
     color: white;
 }
@@ -45,19 +49,32 @@ header{
 #botonBusqueda:hover i{
     color: white;
 }
-.barraBusqueda{
+#barraBusqueda{
     display: none;
-    padding: 5px;
-    border: 2px solid #9d69a1;
-    background-color: #FFF5F8;
-    border-radius: 55px;
-    font-size: 16px;
 }
-.barraBusqueda:focus{
+#barraBusqueda-desplegable{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    transform: translateY(-100%);
+    top: 0px;
+    padding: 25px;
+    border: none;
+    background-color: #FFF5F8;
+    border-bottom: #9d69a1 2px solid;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+#barraBusqueda-desplegable:focus{
     outline: none;
     border-color: #e7cde5;
     transition: border-color 0.2s;
 }
+#barraBusqueda-desplegable.activo{
+    transform: translateY(0);
+}
+
 .logo{
     height: 50px;
     width: auto;
@@ -72,6 +89,11 @@ nav{
 }
 #menu{
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    font-size: larger;
     top: 0;
     right: -100%;
     width: 300px;
@@ -79,14 +101,6 @@ nav{
     background-color: #CBB2D8;
     transition: right 0.3s ease-in-out;
     z-index: 101;
-}
-#menu ul{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 100%; /* 1. Hacemos que la lista ocupe todo el alto */
-    justify-content: center; /* 2. Centra los links verticalmente */
-    align-items: center;    
 }
 
 #menu.activo{
@@ -108,7 +122,6 @@ nav{
     background-color: #5E5468;
     margin: 3px 0;
 }
-
 li{
     list-style: none;
 }
@@ -127,6 +140,12 @@ main{
     justify-content: center;
     grid-template-columns: 1fr;
     gap: 20px;
+}
+main h2{
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0;
 }
 .lista-producto{
     display: flex;
@@ -162,8 +181,9 @@ main{
     transition: background-color 0.3s, color 0.3s;
     margin-bottom: 20px;
 }
-#verProducto-boton:hover{
+#verProducto-boton:active{
     background-color: #9d69a1;
+    transform: scale(0.98);
     color: white;
 }
 
@@ -197,5 +217,21 @@ footer h3{
     #menu{
         display: flex;
         padding: 5px;
+    }
+    #barraBusqueda-desplegable{
+        display: none;
+    }
+    #barraBusqueda{
+        display: block;
+        padding: 5px;
+        border: 2px solid #9d69a1;
+        background-color: #FFF5F8;
+        border-radius: 55px;
+        font-size: 16px;
+    }
+    #barraBusqueda:focus{
+        outline: none;
+        border-color: #e7cde5;
+        transition: border-color 0.2s;
     }
 }
