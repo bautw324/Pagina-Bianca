@@ -115,13 +115,16 @@ nav{
     top: 0;
     right: -100%;
     width: 300px;
-    height: 100vh;
-    background-color: #CBB2D8;
+    height: 90vh;
+    margin: 5vh 0;
+    background-color: white;
+    border-radius: 20px 0 0 20px;
     transition: right 0.3s ease-in-out;
     z-index: 150;
 }
 #menu.activo{
     right: 0;
+    /* box-shadow: 5px 5px black; */
 }
 .opcion{
     background-color: #F7C5CC;
