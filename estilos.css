@@ -31,7 +31,7 @@ a:hover{
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 99;
 }
 .menu-overlay.activo{
     display: block;
@@ -47,7 +47,7 @@ header{
     font-family: 'Lobster', cursive;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 101;
+    z-index: 102;
 }
 .busqueda{
     display: flex;
@@ -89,7 +89,7 @@ header{
     border-bottom: #9d69a1 2px solid;
     font-size: 16px;
     transition: transform 0.3s ease-in-out;
-    z-index: 99;
+    z-index: 100;
 }
 #barraBusqueda-desplegable:focus{
     outline: none;

@@ -12,29 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
         menuOverlay.classList.toggle('activo');
     });
 
-    document.addEventListener('click', function(event) {
-        if (!hamburgerBtn.contains(event.target) && !menu.contains(event.target)) {
-            menu.classList.remove('activo');
-            menuOverlay.classList.remove('activo');
-        }
-    });
-
     botonBusqueda.addEventListener('click', function(event) {
         event.preventDefault();
 
         const headerHeight = header.offsetHeight;
         barraBusqueda.style.top = headerHeight + 'px';
         barraBusqueda.classList.toggle('activo');
+        menuOverlay.classList.toggle('activo');
 
         if (barraBusqueda.classList.contains('activo')) {
             barraBusqueda.focus();
         }
     });
 
-    document.addEventListener('click', function(event) {
-        if (!botonBusqueda.contains(event.target) && !barraBusqueda.contains(event.target)) {
-            barraBusqueda.classList.remove('activo');
-            barraBusqueda.value = '';
-        }
+    menuOverlay.addEventListener('click', function() {
+        menu.classList.remove('activo');
+        barraBusqueda.classList.remove('activo');
+        menuOverlay.classList.remove('activo');
+        barraBusqueda.value = '';
     });
 });
