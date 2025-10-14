@@ -11,6 +11,31 @@
 body{
     background-color: #FFF5F8;
 }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #D46A6A;
+    transition: 0.3s;
+}
+.menu-overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+.menu-overlay.activo{
+    display: block;
+}
 header{
     position: sticky;
     top: 0;
@@ -22,7 +47,7 @@ header{
     font-family: 'Lobster', cursive;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 101;
 }
 .busqueda{
     display: flex;
@@ -57,7 +82,7 @@ header{
     width: 100%;
     left: 0;
     transform: translateY(-100%);
-    top: 0px;
+    top: 0;
     padding: 25px;
     border: none;
     background-color: #FFF5F8;
@@ -92,7 +117,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
     font-size: larger;
     top: 0;
     right: -100%;
@@ -100,11 +125,32 @@ nav{
     height: 100vh;
     background-color: #CBB2D8;
     transition: right 0.3s ease-in-out;
-    z-index: 101;
+    z-index: 102;
 }
-
 #menu.activo{
     right: 0;
+}
+.opcion{
+    background-color: #F7C5CC;
+    border: 2px solid #9d69a1;
+    color: #9d69a1;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 20px;
+}
+.opcion a{
+    color: #9d69a1;
+    padding: 10px 40px;
+}
+.opcion:hover{
+    transform: scale(0.98);
+    background-color: #9d69a1;
+}
+.opcion:hover a{
+    color: white;
 }
 #hamburger-btn{
     display: flex;
@@ -118,19 +164,9 @@ nav{
 }
 #hamburger-btn span{
     width: 30px;
-    height: 3px;
-    background-color: #5E5468;
-    margin: 3px 0;
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-a:hover{
-    color: #D46A6A;
-    transition: 0.3s;
+    height: 2px;
+    background-color: #9d69a1;
+    margin: 2px 0;
 }
 
 main{
