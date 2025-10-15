@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <header id="header">
-            <img src="pagina-img/Bianca_logo.png" alt="Logo" class="logo" id="logo">
+            <img src="pagina-img/Bianca_logo.png" alt="Logo" class="logo" id="logo1">
             <img src="pagina-img/Bianca.png" alt="Logo" class="logo" id="logo2">
         </header>
         <form class="busqueda" role="search">
@@ -28,11 +28,11 @@
                 <span></span>
                 <span></span>
             </button>
-            <ul id="menu">
-                <li class="opcion"><a href="#">Inicio</a></li>
-                <li class="opcion"><a href="#">Productos</a></li>
-                <li class="opcion"><a href="#">Contacto</a></li>
-            </ul>
+            <div id="menu">
+                <button class="boton" data-url="#" id="botonInicio">Inicio</button>
+                <button class="boton" data-url="#" id="botonProducto">Productos</button>
+                <button class="boton" data-url="#" id="botonContacto">Contacto</button>
+            </div>
         </nav>
         <div class="menu-overlay"></div>
         <input type="search" placeholder=" Buscar..." id="barraBusqueda-desplegable" autocomplete="off">
@@ -42,20 +42,20 @@
                 <div class="producto-box">
                     <img src="fotos/Imagen de WhatsApp 2025-10-12 a las 15.04.00_fdfc0642.jpg" alt="produto1" class="producto">
                     <h3>Producto 1</h3>
-                    <p>$xxxxx</p>
+                    <p>$15.000</p>
                 </div>
                 <div class="producto-box">
                     <img src="fotos/Imagen de WhatsApp 2025-10-12 a las 15.04.01_b7578979.jpg" alt="produto2" class="producto">
                     <h3>Producto 2</h3>
-                    <p>$xxxxx</p>
+                    <p>$12.000</p>
                 </div>
                 <div class="producto-box">
                     <img src="fotos/Imagen de WhatsApp 2025-10-12 a las 15.04.04_bb07134b.jpg" alt="produto3" class="producto">
                     <h3>Producto 3</h3>
-                    <p>$xxxxx</p>
+                    <p>$16.000</p>
                 </div>
             </div>
-            <button class="verProductos" id="verProducto-boton">Ver todos los Productos</button>  
+            <button class="boton" data-url="#" id="verProducto-boton">Ver todos los Productos</button>  
         </main>
         <footer>
             <h3>Bianca 2025</h3>

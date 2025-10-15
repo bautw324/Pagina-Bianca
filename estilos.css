@@ -17,10 +17,6 @@ li{
 a{
     text-decoration: none;
 }
-a:hover{
-    color: #D46A6A;
-    transition: 0.3s;
-}
 header{
     position: fixed;
     width: 100%;
@@ -88,13 +84,12 @@ header{
     opacity: 1;
     visibility: visible; 
 }
-
 #barraBusqueda-desplegable:focus{
     outline: none;
     border-color: #e7cde5;
     transition: border-color 0.2s;
 }
-.logo{
+#logo1{
     height: 50px;
     width: auto;
 }
@@ -128,7 +123,6 @@ nav{
     padding: 30px;
     font-size: larger;
     background-color: #FFF5F8;
-    border: #e7cde5 2px solid;
     border-radius: 50px;
     z-index: 150;
 }
@@ -137,23 +131,22 @@ nav{
     opacity: 1;
     visibility: visible; 
 }
-.opcion{
-    background-color: #FFF5F8;
-    border: 2px solid #9d69a1;
-    color: #9d69a1;
+.boton{
+    background-color: #e7cde5;
+    border: 2px solid #e7cde5;
     padding: 20px;
     font-size: 20px;
     border-radius: 40px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition:  0.3s, color 0.3s;
     text-align: center;
 }
-.opcion:hover{
+.boton:active{
     transform: scale(0.98);
     background-color: #9d69a1;
-}
-.opcion:hover a{
+    border-color: #9d69a1;
     color: white;
+
 }
 #hamburger-btn{
     position: fixed;
@@ -222,6 +215,13 @@ main h2{
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.producto-box:active{
+    transform: scale(0.98);
+    box-shadow: 0px 0px 15px gray;
+    transition: 0.3s ease-in-out;
 }
 .producto{
     height:100%;
@@ -230,29 +230,15 @@ main h2{
     overflow: hidden;
     border-radius: 10px;
 }
-
-#verProducto-boton{
-    background-color: #F7C5CC;
-    border: 2px solid #9d69a1;
-    color: #9d69a1;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-bottom: 20px;
-}
-#verProducto-boton:active{
-    background-color: #9d69a1;
-    transform: scale(0.98);
-    color: white;
-}
-
 footer{
     display: grid;
     justify-content: center;
-    background-color: #F7C5CC;
+    background-color: #e7cde5;
     min-height: 300px;
+    padding-top: 40px;
+    margin-top: 40px;
+    mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
 }
 footer h3{
     font-family: 'Lobster', cursive;
@@ -273,26 +259,68 @@ footer h3{
     font-size: 18px;
     padding: 20px;
 }
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1025px) {
     #menu{
+        position: fixed;
         display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
         padding: 5px;
+        top: 0;
+        right: 0;
+        transform: translateY(22px);
+        opacity: 1;
+        visibility: visible; 
+        background-color: transparent;
+        gap: 0px;
+    }
+    #menu .boton{
+        transform: none;
+        background-color: transparent;
+        border: none;
+        padding: 10px 20px;
+        transition: 0.2s ease-in-out;
+    }
+    #menu .boton:active{
+        background-color: #e7cde5;
+        color: white;
+        /* transition: 0.3s ease-in-out; */
     }
     #barraBusqueda-desplegable{
         display: none;
     }
     #barraBusqueda{
+        position: fixed;
+        top: 32px;
+        left: 30px;
         display: block;
         padding: 5px;
         border: 2px solid #9d69a1;
         background-color: #FFF5F8;
         border-radius: 55px;
         font-size: 16px;
+        z-index: 102;
     }
     #barraBusqueda:focus{
         outline: none;
         border-color: #e7cde5;
         transition: border-color 0.2s;
+    }
+    #botonBusqueda{
+    position: fixed;
+    top: 30px;
+    left: 250px;
+    }
+    #logo2{
+        display: block;
+        height: 50px;
+        width: auto;
+    }
+    #logo1{
+        display: none;
+    }
+    #hamburger-btn{
+        display: none;
     }
 }

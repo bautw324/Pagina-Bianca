@@ -1,11 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(){
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const menu = document.getElementById('menu');
     const menuOverlay = document.querySelector('.menu-overlay');
     const botonBusqueda = document.getElementById("botonBusqueda");
     const barraBusqueda = document.getElementById("barraBusqueda-desplegable");
+    const boton = document.querySelectorAll('.boton');
+
+    boton.forEach(function (boton) {
+        boton.addEventListener('click',function(){
+            let url = boton.dataset.url;
+            window.location.href = url;
+        });
+    });
 
     hamburgerBtn.addEventListener('click', function(event) {
+        if (window.innerWidth >= 1025) {
+            return; 
+        }
         event.preventDefault();
         if (menu.classList.contains('activo')) {
             menu.classList.remove('activo');
@@ -21,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     botonBusqueda.addEventListener('click', function(event) {
+        if (window.innerWidth >= 1025) {
+            return; 
+        }
         event.preventDefault();
         if (barraBusqueda.classList.contains('activo')) {
             barraBusqueda.classList.remove('activo');
@@ -45,6 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
         barraBusqueda.value = '';
         menuOverlay.classList.remove('activo');
     });
-
-
 });
