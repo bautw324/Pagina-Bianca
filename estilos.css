@@ -8,6 +8,13 @@
     color: #9d69a1;
     -webkit-tap-highlight-color: transparent;
 }
+.no-seleccionable {
+    /* Clase para evitar la selección de texto */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Estándar */
+}
 body{
     background-color: #FFF5F8;
 }
@@ -210,25 +217,41 @@ main h2{
 }
 .producto-box{
     width: 200px;
-    height: 225px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     border-radius: 20px;
     padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .producto-box:active{
     transform: scale(0.98);
     box-shadow: 0px 0px 15px gray;
     transition: 0.3s ease-in-out;
 }
-.producto{
-    height:100%;
+.producto-box .producto{
+    height: 150px;
     width: 100%;
     object-fit: cover;
-    overflow: hidden;
+    display: block;
     border-radius: 10px;
+}
+.nombre-producto {
+    white-space: nowrap;
+}
+.nombre-producto.carrusel-activo{
+    animation: carrusel-movimiento 10s linear infinite;
+}
+/* Creo una animación por si el texto se sale de la ventana */
+@keyframes carrusel-movimiento {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 footer{
     display: grid;
