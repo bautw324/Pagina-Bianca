@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function cargarYMostrarProductos() {
         // Este se usa al usar mi computadora como servidor. Ejecutar en la carpeta del servidor.py --> python servidor.py
         // fetch('http://127.0.0.1:5000/api/productos')
-        fetch('https://bgenovese.pythonanywhere.com/')
+        fetch('https://bgenovese.pythonanywhere.com/api/productos')
         .then(function(response) {
             return response.json();
         })
