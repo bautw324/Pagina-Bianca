@@ -7,30 +7,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hamburgerBtn.addEventListener('click', function(event) {
         event.preventDefault();
-        menu.classList.toggle('activo');
-        barraBusqueda.classList.remove('activo');
-        barraBusqueda.value = '';
-        if (!menuOverlay.classList.contains('activo')) {
-            menuOverlay.classList.toggle('activo');
-        }
+        if (menu.classList.contains('activo')) {
+            menu.classList.remove('activo');
+            menuOverlay.classList.remove('activo');
+        } else {
+            menu.classList.toggle('activo');
+            barraBusqueda.classList.remove('activo');
+            barraBusqueda.value = '';
+            if (!menuOverlay.classList.contains('activo')) {
+                menuOverlay.classList.toggle('activo');
+            }
+        } 
     });
 
     botonBusqueda.addEventListener('click', function(event) {
         event.preventDefault();
-        barraBusqueda.classList.toggle('activo');
-        menu.classList.remove('activo');
-        if (!menuOverlay.classList.contains('activo')) {
-            menuOverlay.classList.toggle('activo');
-        }
         if (barraBusqueda.classList.contains('activo')) {
-            barraBusqueda.focus();
-        }
+            barraBusqueda.classList.remove('activo');
+            barraBusqueda.value = '';
+            menuOverlay.classList.remove('activo');
+        } else {
+            barraBusqueda.classList.toggle('activo');
+            menu.classList.remove('activo');
+            menuOverlay.classList.toggle('activo');
+            if (barraBusqueda.classList.contains('activo')) {
+                barraBusqueda.focus();
+            }
+            if (!menuOverlay.classList.contains('activo')) {
+                menuOverlay.classList.toggle('activo');
+            }
+        } 
     });
 
     menuOverlay.addEventListener('click', function() {
         menu.classList.remove('activo');
         barraBusqueda.classList.remove('activo');
-        menuOverlay.classList.remove('activo');
         barraBusqueda.value = '';
+        menuOverlay.classList.remove('activo');
     });
+
+
 });
