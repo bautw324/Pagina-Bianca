@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "Cartuchera flor",
     "precio": "$15.000",
-    "imagen": "https://github.com/bautw324/Pagina-Bianca/blob/main/fotos/Imagen%20de%20WhatsApp%202025-10-12%20a%20las%2015.04.00_fdfc0642.jpg",
+    "imagen": "https://github.com/bautw324/Pagina-Bianca/blob/05bb2ed41e78dcd0cff32c7cd0a4bf76d3761fb4/fotos/Imagen%20de%20WhatsApp%202025-10-12%20a%20las%2015.04.00_fdfc0642.jpg",
     "alt": "Cartuchera flor",
     "stock": 10
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "nombre": "Bolso cosmetico",
     "precio": "$13.000",
-    "imagen": "https://github.com/bautw324/Pagina-Bianca/blob/main/fotos/Imagen%20de%20WhatsApp%202025-10-12%20a%20las%2015.04.01_b7578979.jpg",
+    "imagen": "https://github.com/bautw324/Pagina-Bianca/blob/05bb2ed41e78dcd0cff32c7cd0a4bf76d3761fb4/fotos/Imagen%20de%20WhatsApp%202025-10-12%20a%20las%2015.04.01_b7578979.jpg",
     "alt": "Bolso cosmetico",
     "stock": 5
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "nombre": "Cartuchera 'Hello Kitty'",
     "precio": "$16.000",
-    "imagen": "https://github.com/bautw324/Pagina-Bianca/blob/main/fotos/Imagen%20de%20WhatsApp%202025-10-12%20a%20las%2015.04.04_bb07134b.jpg",
+    "imagen": "https://github.com/bautw324/Pagina-Bianca/blob/05bb2ed41e78dcd0cff32c7cd0a4bf76d3761fb4/fotos/Imagen%20de%20WhatsApp%202025-10-12%20a%20las%2015.04.04_bb07134b.jpg",
     "alt": "Cartuchera 'Hello Kitty'",
     "stock": 0
   }
